@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  from_user_id: 1
+  to_user_id: 1
+  to_email: MyString
+  created_at: 2014-10-20 15:17:00
+  url: MyString
+
+two:
+  from_user_id: 1
+  to_user_id: 1
+  to_email: MyString
+  created_at: 2014-10-20 15:17:00
+  url: MyString
