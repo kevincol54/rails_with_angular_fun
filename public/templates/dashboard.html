@@ -1,16 +1,35 @@
+<h1>welcome back {{ user.name }}</h1>
 <div>
   <ul>
     <li ng-repeat="article in articles | orderBy:publishedDate:false">
-      <div class="article listing">
-        <div class="larg-11 small-11 columns">
-          <h2>
-            <a href="{{ article.link }}" title="{{ article.title }}">
-              {{ article.title }}
-            </a>
-          </h2>
-          <p>
-            {{ article.publishedDate | date:'m/d/yy h:mm:ss a' }}
-          </p>
+      <div class="article-listing">
+        <div class="large-11 small-11 columns">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div data-ng-hide="ShowShareBox">
+                <a ng-click="showShareBox=!showShareBox">Share With A Friend</a>
+              </div>
+              <div data-ng-show="showShareBox">
+                <form name="shareForm">
+                  <label> Share With A Friend</label>
+                  <input type="text" placeholder="email or username" data-ng-model="newShare.recipient">
+                  <input type="button" class="btn" value="Cancel" data-ng-click="showShareBox=!showShareBox">
+                  <input type="submit" class="btn" ng-click="showShareBox=!showShareBox;share()" ng-disabled="shareForm.$invalid" value="Share">
+                </form>
+              </div>
+
+              <h2 class="panel-title">
+                <a href="{{ article.link }}" title="{{ article.title }}">
+                  {{ article.title }}
+                </a>
+              </h2>
+            </div>
+            <div class="panel-body">
+              <p>
+                {{ article.publishedDate | date:'m/d/yy h:mm:ss a' }}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </li>

@@ -35,6 +35,8 @@ gem 'ngmin-rails'
 gem 'bootstrap-sass-rails'
 gem 'zurb-foundation'
 gem 'quiet_assets'
+gem 'jshint-rb'
+gem 'jshintrb'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
