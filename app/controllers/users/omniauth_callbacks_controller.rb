@@ -26,14 +26,14 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       auth.update_attributes({
         uid: uid,
         token: auth_hash['credentials']['token'],
-        secert: auth_hash['credentials']['secert'],
+        secret: auth_hash['credentials']['secret'],
         name: name,
         url: "http://twitter.com/#{name}"
         })
     end
 
     if user
-      sign_in_and_redirect user, :event => authentication
+      sign_in_and_redirect user, :event => :authentication
     else
       redirect_to :new_user_registration
     end

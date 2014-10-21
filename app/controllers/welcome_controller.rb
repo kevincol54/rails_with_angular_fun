@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
+
   def index
   end
 
@@ -8,4 +9,5 @@ class WelcomeController < ApplicationController
   def choose_layout
     user_signed_in? ? "angular" : "application"
   end
+  
 end
