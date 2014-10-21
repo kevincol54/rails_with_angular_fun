@@ -1,4 +1,4 @@
-angular.module('myApp', ['ngRoute', 'myApp.controllers', 'myApp.services', 'ngResource'])
+angular.module('myApp', ['ngRoute', 'myApp.controllers', 'myApp.services', 'myApp.directives', 'ngResource'])
 .config(function($routeProvider) {
   $routeProvider.when('/', {
     templateUrl: '/templates/dashboard.html',
